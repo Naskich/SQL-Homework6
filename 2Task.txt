@@ -1,0 +1,93 @@
+Problem 2.Create a stored procedure
+Your task is to create a stored procedure that accepts a number as a 
+parameter and returns all persons who have more money in their accounts
+ than the supplied number.
+
+USE SoftUni
+GO
+
+CREATE PROC dbo.usp_NewAritmeticNumber
+AS
+ SELECT FirstName+' '+LastName AS 'Name and Family',(DepartmentID *10000) AS 'Result', Salary
+ FROM Employees
+ WHERE (DepartmentID *10000)<Salary
+
+GO
+EXEC usp_NewAritmeticNumber
+
+
+Roberto Tamburello	10000	43300,00
+Rob Walters	20000	29800,00
+Thierry D'Hers	20000	25000,00
+Gail Erickson	10000	32700,00
+Jossef Goldberg	10000	32700,00
+Terri Duffy	10000	63500,00
+James Hamilton	70000	84100,00
+Ovidiu Cracium	20000	28800,00
+Janice Galvin	20000	25000,00
+Michael Sullivan	10000	36100,00
+Stephen Jiang	30000	48100,00
+Sharon Salavaria	10000	32700,00
+Brian Welcker	30000	72100,00
+Amy Alberts	30000	48100,00
+Syed Abbas	30000	48100,00
+
+------------------------------------------------------------------------
+SECOND TYPE
+-----------------------------------------------------------------------
+USE SoftUni
+GO
+
+CREATE PROC usp_AcceptsNumbersSalary
+
+AS
+ SELECT FirstName+' '+LastName AS 'Name and Family',Salary
+ FROM Employees
+ WHERE Salary > 25000
+GO
+
+EXEC usp_AcceptsNumbersSalary
+
+
+
+Roberto Tamburello	43300,00
+Rob Walters	29800,00
+David Bradley	37500,00
+Gail Erickson	32700,00
+Jossef Goldberg	32700,00
+Terri Duffy	63500,00
+Ashvini Sharma	32500,00
+Paula Barreto de Mattos	27100,00
+Jean Trenary	50500,00
+Janaina Bueno	27400,00
+Wendy Kahn	43300,00
+Diane Margheim	40900,00
+Dan Bacon	27400,00
+Ken Sanchez	125500,00
+Gigi Matthew	40900,00
+Francois Ajenstat	38500,00
+Dan Wilson	38500,00
+David Liu	34700,00
+Laura Norman	60100,00
+James Hamilton	84100,00
+Ramesh Meyyappan	27400,00
+Stephanie Conroy	39700,00
+Dylan Miller	50500,00
+Karen Berg	27400,00
+Barbara Moreland	26400,00
+Peter Connelly	32500,00
+Hazem Abolrous	28800,00
+Mike Seamans	26400,00
+Michael Raheem	42500,00
+Ovidiu Cracium	28800,00
+Michael Sullivan	36100,00
+Stephen Jiang	48100,00
+Sharon Salavaria	32700,00
+Brian Welcker	72100,00
+Sheela Word	30000,00
+Amy Alberts	48100,00
+Syed Abbas	48100,00
+Svetlin Nakov	48000,00
+Martin Kulov	48000,00
+George Denchev	48000,00
+
